@@ -27,8 +27,7 @@ public class Pelicula {
 	private Categoria categoria;
 	private Formato formato;
 	private Valoracion valoracion;
-	private List<PeliculaActor> relPeliculaActor;
-	private List<PeliculaDirector> relPeliculaDirector;
+	private List<PeliculaEquipo> relPeliculaEquipo;
 
 	/**
 	 * Constructor vacio
@@ -207,20 +206,12 @@ public class Pelicula {
 		this.valoracion = valoracion;
 	}
 
-	public List<PeliculaActor> getRelPeliculaActor() {
-		return relPeliculaActor;
+	public List<PeliculaEquipo> getRelPeliculaEquipo() {
+		return relPeliculaEquipo;
 	}
 
-	public void setRelPeliculaActor(List<PeliculaActor> relPeliculaActor) {
-		this.relPeliculaActor = relPeliculaActor;
-	}
-
-	public List<PeliculaDirector> getRelPeliculaDirector() {
-		return relPeliculaDirector;
-	}
-
-	public void setRelPeliculaDirector(List<PeliculaDirector> relPeliculaDirector) {
-		this.relPeliculaDirector = relPeliculaDirector;
+	public void setRelPeliculaEquipo(List<PeliculaEquipo> relPeliculaEquipo) {
+		this.relPeliculaEquipo = relPeliculaEquipo;
 	}
 
 	@Override
