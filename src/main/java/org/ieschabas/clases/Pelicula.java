@@ -19,7 +19,7 @@ import org.ieschabas.enums.Valoracion;
 @Entity
 public class Pelicula {
 
-	private int id;
+	private long id;
 	private String titulo;
 	private String descripcion;
 	private int añopublicacion;
@@ -27,7 +27,7 @@ public class Pelicula {
 	private Categoria categoria;
 	private Formato formato;
 	private Valoracion valoracion;
-	private List<PeliculaEquipo> relPeliculaEquipo;
+	private List<Equipo> equipo;
 
 	/**
 	 * Constructor vacio
@@ -67,12 +67,11 @@ public class Pelicula {
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -206,12 +205,13 @@ public class Pelicula {
 		this.valoracion = valoracion;
 	}
 
-	public List<PeliculaEquipo> getRelPeliculaEquipo() {
-		return relPeliculaEquipo;
+	@ManyToMany(cascade = CascadeType.MERGE)
+	public List<Equipo> getEquipo() {
+		return equipo;
 	}
 
-	public void setRelPeliculaEquipo(List<PeliculaEquipo> relPeliculaEquipo) {
-		this.relPeliculaEquipo = relPeliculaEquipo;
+	public void setEquipo(List<Equipo> equipo) {
+		this.equipo = equipo;
 	}
 
 	@Override

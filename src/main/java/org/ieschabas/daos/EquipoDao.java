@@ -35,7 +35,10 @@ public class EquipoDao {
 	public static void guardarEquipo(Equipo equipo) {
 
 		setUp();
-		em.merge(equipo);
+		
+		if(equipo.getId() != 0) {
+			equipo = em.merge(equipo);
+		}
 		em.persist(equipo);
 
 		close();

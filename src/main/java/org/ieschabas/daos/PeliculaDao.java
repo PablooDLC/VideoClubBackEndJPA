@@ -35,7 +35,10 @@ public class PeliculaDao {
 	public static void guardarPelicula(Pelicula pelicula) {
 
 		setUp();
-		em.merge(pelicula);
+
+		if(pelicula.getId() != 0) {
+			pelicula = em.merge(pelicula);
+		}
 		em.persist(pelicula);
 
 		// LOGGER.info("Identificador de la pelicula: " + pelicula.getId());

@@ -15,7 +15,7 @@ public class Director extends Equipo {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	
 	public Director(String nombre, String apellidos, int anyoNac, String pais) {
 		super(nombre, apellidos, anyoNac, pais);
 		// TODO Auto-generated constructor stub

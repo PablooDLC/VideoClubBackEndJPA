@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorValue(value = "Actor")
 public class Actor extends Equipo {
-
+	
 	public Actor() {
 		super();
 		// TODO Auto-generated constructor stub

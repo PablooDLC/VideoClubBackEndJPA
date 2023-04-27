@@ -13,15 +13,16 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipo", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorColumn(name = "rol", discriminatorType = DiscriminatorType.STRING)
 public class Equipo {
 
-	private int id;
+	private long id;
 	private String nombre;
 	private String apellidos;
 	private int anyoNac;
 	private String pais;
-	private String rol;
+	@Transient
+	private transient String rol;
 
 	/**
 	 * Constructor vacio
@@ -56,8 +57,7 @@ public class Equipo {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
@@ -66,7 +66,7 @@ public class Equipo {
 	 * 
 	 * @param id
 	 */
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -142,8 +142,9 @@ public class Equipo {
 		this.anyoNac = anyoNac;
 	}
 	
+	//@Enumerated(EnumType.STRING)
 	
-
+	@Column(insertable = false, updatable = false)
 	public String getRol() {
 		return rol;
 	}
@@ -154,7 +155,7 @@ public class Equipo {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(anyoNac, apellidos, id, nombre, pais);
+		return Objects.hash(anyoNac, apellidos, id, nombre, pais, rol);
 	}
 
 	@Override
@@ -167,13 +168,14 @@ public class Equipo {
 			return false;
 		Equipo other = (Equipo) obj;
 		return anyoNac == other.anyoNac && Objects.equals(apellidos, other.apellidos) && id == other.id
-				&& Objects.equals(nombre, other.nombre) && Objects.equals(pais, other.pais);
+				&& Objects.equals(nombre, other.nombre) && Objects.equals(pais, other.pais)
+				&& Objects.equals(rol, other.rol);
 	}
 
 	@Override
 	public String toString() {
 		return "Equipo [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", anyoNac=" + anyoNac
-				+ ", pais=" + pais + "]";
+				+ ", pais=" + pais + ", rol=" + rol + "]";
 	}
 	
 	
