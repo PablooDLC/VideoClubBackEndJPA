@@ -4,6 +4,11 @@
 <class>org.ieschabas.clases.Equipo</class>
 <class>org.ieschabas.clases.Actor</class>
 <class>org.ieschabas.clases.Director</class>
+<class>org.ieschabas.clases.Administrador</class>
+<class>org.ieschabas.clases.Alquiler</class>
+<class>org.ieschabas.clases.Cliente</class>
+<class>org.ieschabas.clases.Pago</class>
+<class>org.ieschabas.clases.Usuario</class>
 
 <properties>
 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>

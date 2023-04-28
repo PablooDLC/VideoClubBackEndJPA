@@ -20,21 +20,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		List<Equipo> equipo = new ArrayList<Equipo>();
-
-		Equipo actor = new Actor("Pablo", "DeLa", 1414, "esp");
-		equipo.add(actor);
-		EquipoDao.guardarEquipo(actor);
-		Equipo director = new Director("Pepe", "Alonso", 3333, "esp");
-		equipo.add(director);
-		EquipoDao.guardarEquipo(director);
-
-		Pelicula pelicula = new Pelicula("Pelicula1", "La primera", 2023, "2h", Categoria.CIENCIAFICCION, Formato.FLV,
-				Valoracion.CINCO);
-		pelicula.setEquipo(equipo);
-		PeliculaDao.guardarPelicula(pelicula);
-		;
-
+		Pelicula pelicula1 = new Pelicula("Pelicula1", "EEEEE", 2023, "2h", null, null, null);
+		PeliculaDao.guardarPelicula(pelicula1);
+		
 		LOGGER.info("Inicio de la aplicacion");
 
 	}

@@ -15,7 +15,7 @@ public class PeliculaDao {
 	private static final Logger LOGGER = Logger.getLogger(PeliculaDao.class);
 	private static EntityManager em;
 	private static EntityManagerFactory emf;
-	private static final String SQL_BUSQUEDA_EVENTO = "SELECT e FROM videoClub e";
+	private static final String SQL_BUSQUEDA_EVENTO = "SELECT p FROM Pelicula p";
 
 	private static void setUp() {
 		emf = Persistence.createEntityManagerFactory("videoClub");
@@ -75,5 +75,19 @@ public class PeliculaDao {
 
 		return peliculas;
 
+	}
+	
+	public static void modificarPelicula(Pelicula pelicula) {
+		
+		setUp();
+		
+		pelicula = em.find(Pelicula.class, pelicula.getId());
+		
+		if(pelicula.getId() != 0) {
+			pelicula = em.merge(pelicula);
+		}
+		em.persist(pelicula);
+		
+		close();
 	}
 }
