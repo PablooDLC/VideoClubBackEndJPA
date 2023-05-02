@@ -7,10 +7,14 @@ import javax.persistence.*;
 @Entity
 public class Alquiler {
 
-	private int id;
+	@Id
+	@AttributeOverrides({
+		@AttributeOverride(name="idAlquiler", column=@Column(name="idAlquiler")),
+		@AttributeOverride(name="idCliente", column=@Column(name="idCliente")),
+		@AttributeOverride(name="idPelicula", column=@Column(name="idPelicula")),
+	})
+	private AlquilerId idCompuesta;
 	private String fechaAlquiler;
-	private int idCliente;
-	private int idPelicula;
 	private String fechaRetorno;
 	
 	public Alquiler() {
@@ -18,22 +22,19 @@ public class Alquiler {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Alquiler(String fechaAlquiler, int idCliente, int idPelicula, String fechaRetorno) {
+	public Alquiler(String fechaAlquiler, String fechaRetorno) {
 		super();
 		this.fechaAlquiler = fechaAlquiler;
-		this.idCliente = idCliente;
-		this.idPelicula = idPelicula;
 		this.fechaRetorno = fechaRetorno;
 	}
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	public int getId() {
-		return id;
+	
+	public AlquilerId getIdCompuesta() {
+		return idCompuesta;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdCompuesta(AlquilerId idCompuesta) {
+		this.idCompuesta = idCompuesta;
 	}
 
 	public String getFechaAlquiler() {
@@ -42,22 +43,6 @@ public class Alquiler {
 
 	public void setFechaAlquiler(String fechaAlquiler) {
 		this.fechaAlquiler = fechaAlquiler;
-	}
-
-	public int getIdCliente() {
-		return idCliente;
-	}
-
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
-	}
-
-	public int getIdPelicula() {
-		return idPelicula;
-	}
-
-	public void setIdPelicula(int idPelicula) {
-		this.idPelicula = idPelicula;
 	}
 
 	public String getFechaRetorno() {
@@ -70,13 +55,12 @@ public class Alquiler {
 
 	@Override
 	public String toString() {
-		return "Alquiler [id=" + id + ", fechaAlquiler=" + fechaAlquiler + ", idCliente=" + idCliente + ", idPelicula="
-				+ idPelicula + ", fechaRetorno=" + fechaRetorno + "]";
+		return "Alquiler [fechaAlquiler=" + fechaAlquiler + ", fechaRetorno=" + fechaRetorno + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(fechaAlquiler, fechaRetorno, id, idCliente, idPelicula);
+		return Objects.hash(fechaAlquiler, fechaRetorno);
 	}
 
 	@Override
@@ -88,8 +72,7 @@ public class Alquiler {
 		if (getClass() != obj.getClass())
 			return false;
 		Alquiler other = (Alquiler) obj;
-		return Objects.equals(fechaAlquiler, other.fechaAlquiler) && Objects.equals(fechaRetorno, other.fechaRetorno)
-				&& id == other.id && idCliente == other.idCliente && idPelicula == other.idPelicula;
+		return Objects.equals(fechaAlquiler, other.fechaAlquiler) && Objects.equals(fechaRetorno, other.fechaRetorno);
 	}
 	
 	

@@ -1,9 +1,9 @@
 package org.ieschabas.clases;
 
 import javax.persistence.*;
-import javax.persistence.Id;
 
 @Entity
+@DiscriminatorColumn(name = "tipo", discriminatorType = DiscriminatorType.STRING)
 public class Usuario {
 
 	private int id;
@@ -12,6 +12,7 @@ public class Usuario {
 	private String direccion;
 	private boolean activo;
 	private String fechaRegistro;
+	private Alquiler idAlquiler;
 	
 	public Usuario() {
 		super();
@@ -85,6 +86,14 @@ public class Usuario {
 		System.out.println("Dirección:\t" + this.direccion);
 		System.out.println("Activo:\t" + this.activo);
 		System.out.println("Fecha de registro:\t" + this.fechaRegistro);
+	}
+
+	public Alquiler getIdAlquiler() {
+		return idAlquiler;
+	}
+
+	public void setIdAlquiler(Alquiler idAlquiler) {
+		this.idAlquiler = idAlquiler;
 	}
 	
 }

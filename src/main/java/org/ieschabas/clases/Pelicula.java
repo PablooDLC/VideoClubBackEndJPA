@@ -27,7 +27,9 @@ public class Pelicula {
 	private Categoria categoria;
 	private Formato formato;
 	private Valoracion valoracion;
-	private List<Equipo> equipo;
+	private List<Equipo> actores;
+	private List<Equipo> directores;
+	//private List<Equipo> alquileres;
 
 	/**
 	 * Constructor vacio
@@ -206,13 +208,31 @@ public class Pelicula {
 	}
 
 	@ManyToMany(cascade = CascadeType.MERGE)
-	public List<Equipo> getEquipo() {
-		return equipo;
+	public List<Equipo> getActores() {
+		return actores;
 	}
 
-	public void setEquipo(List<Equipo> equipo) {
-		this.equipo = equipo;
+	public void setActores(List<Equipo> actores) {
+		this.actores = actores;
 	}
+	
+	@ManyToMany(cascade = CascadeType.MERGE)
+	public List<Equipo> getDirectores() {
+		return directores;
+	}
+
+	public void setDirectores(List<Equipo> directores) {
+		this.directores = directores;
+	}
+
+	/*@OneToMany(cascade = CascadeType.MERGE)
+	public List<Equipo> getAlquileres() {
+		return alquileres;
+	}
+
+	public void setAlquileres(List<Equipo> alquileres) {
+		this.alquileres = alquileres;
+	}*/
 
 	@Override
 	public int hashCode() {

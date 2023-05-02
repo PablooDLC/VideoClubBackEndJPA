@@ -1866,3 +1866,4 @@ Caused by: java.sql.SQLException: Referencing column 'Pelicula_id' and reference
 28-04-2023 20:34:17 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 28-04-2023 20:34:17 INFO  Main:38 - Inicio de la aplicacion
 28-04-2023 20:48:25 INFO  Main:26 - Inicio de la aplicacion
+02-05-2023 16:45:07 INFO  Main:26 - Inicio de la aplicacion

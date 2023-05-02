@@ -1,5 +1,10 @@
 package org.ieschabas.clases;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value = "Admin")
 public class Administrador extends Usuario{
 
 	public Administrador() {
