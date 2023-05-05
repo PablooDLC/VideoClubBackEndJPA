@@ -6,13 +6,12 @@ import javax.persistence.*;
 @DiscriminatorColumn(name = "tipo", discriminatorType = DiscriminatorType.STRING)
 public class Usuario {
 
-	private int id;
+	private long id;
 	private String nombre;
 	private String apellidos;
 	private String direccion;
 	private boolean activo;
 	private String fechaRegistro;
-	private Alquiler idAlquiler;
 	
 	public Usuario() {
 		super();
@@ -30,11 +29,11 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -87,13 +86,4 @@ public class Usuario {
 		System.out.println("Activo:\t" + this.activo);
 		System.out.println("Fecha de registro:\t" + this.fechaRegistro);
 	}
-
-	public Alquiler getIdAlquiler() {
-		return idAlquiler;
-	}
-
-	public void setIdAlquiler(Alquiler idAlquiler) {
-		this.idAlquiler = idAlquiler;
-	}
-	
 }

@@ -15,7 +15,7 @@ public class PeliculaDao {
 	private static final Logger LOGGER = Logger.getLogger(PeliculaDao.class);
 	private static EntityManager em;
 	private static EntityManagerFactory emf;
-	private static final String SQL_BUSQUEDA_EVENTO = "SELECT p FROM Pelicula p";
+	private static final String SQL_BUSQUEDA_PELICULA = "SELECT p FROM Pelicula p";
 
 	private static void setUp() {
 		emf = Persistence.createEntityManagerFactory("videoClub");
@@ -59,7 +59,7 @@ public class PeliculaDao {
 	public static List<Pelicula> ObtenerPelicula() {
 		setUp();
 
-		List<Pelicula> peliculas = em.createQuery(SQL_BUSQUEDA_EVENTO, Pelicula.class).getResultList();
+		List<Pelicula> peliculas = em.createQuery(SQL_BUSQUEDA_PELICULA, Pelicula.class).getResultList();
 
 		if (peliculas.isEmpty()) {
 			LOGGER.info("No hay datos en la tabla equipo");

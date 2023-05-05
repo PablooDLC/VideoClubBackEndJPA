@@ -15,7 +15,7 @@ public class EquipoDao {
 	private static final Logger LOGGER = Logger.getLogger(EquipoDao.class);
 	private static EntityManager em;
 	private static EntityManagerFactory emf;
-	private static final String SQL_BUSQUEDA_EVENTO = "SELECT e FROM videoClub e";
+	private static final String SQL_BUSQUEDA_EVENTO = "SELECT e FROM Equipo e";
 
 	private static void setUp() {
 		emf = Persistence.createEntityManagerFactory("videoClub");

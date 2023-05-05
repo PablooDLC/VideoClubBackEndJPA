@@ -1,44 +1,64 @@
 package org.ieschabas.clases;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Embeddable;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.ManyToOne;
 
 @Embeddable
 public class AlquilerId implements Serializable {
 
-	private long idAlquiler;
-	private long idCliente;
-	private long idPelicula;
+	private Date fechaAlquiler;
+	private Usuario idCliente;
+	private Pelicula idPelicula;
 
-	public long getIdAlquiler() {
-		return idAlquiler;
+	public AlquilerId() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public void setIdAlquiler(long idAlquiler) {
-		this.idAlquiler = idAlquiler;
+	public AlquilerId(Pelicula idPelicula, Usuario idCliente, Date fechaAlquiler) {
+		super();
+		this.fechaAlquiler = fechaAlquiler;
+		this.idCliente = idCliente;
+		this.idPelicula = idPelicula;
 	}
 
-	public long getIdCliente() {
+	public Date getFechaAlquiler() {
+		return fechaAlquiler;
+	}
+
+	public void setFechaAlquiler(Date fechaAlquiler) {
+		this.fechaAlquiler = fechaAlquiler;
+	}
+
+	@ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+	public Usuario getIdCliente() {
 		return idCliente;
 	}
 
-	public void setIdCliente(long idCliente) {
+	public void setIdCliente(Usuario idCliente) {
 		this.idCliente = idCliente;
 	}
 
-	public long getIdPelicula() {
+	@ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+	public Pelicula getIdPelicula() {
 		return idPelicula;
 	}
 
-	public void setIdPelicula(long idPelicula) {
+	public void setIdPelicula(Pelicula idPelicula) {
 		this.idPelicula = idPelicula;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(idAlquiler, idCliente, idPelicula);
+		return Objects.hash(fechaAlquiler, idCliente, idPelicula);
 	}
 
 	@Override
@@ -50,12 +70,13 @@ public class AlquilerId implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		AlquilerId other = (AlquilerId) obj;
-		return idAlquiler == other.idAlquiler && idCliente == other.idCliente && idPelicula == other.idPelicula;
+		return fechaAlquiler == other.fechaAlquiler && idCliente == other.idCliente && idPelicula == other.idPelicula;
 	}
 
 	@Override
 	public String toString() {
-		return "AlquilerId [idAlquiler=" + idAlquiler + ", idCliente=" + idCliente + ", idPelicula=" + idPelicula + "]";
+		return "AlquilerId [idAlquiler=" + fechaAlquiler + ", idCliente=" + idCliente + ", idPelicula=" + idPelicula
+				+ "]";
 	}
 
 }

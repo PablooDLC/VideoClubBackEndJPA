@@ -72,4 +72,15 @@ public class UsuariosDao {
 		return usuarios;
 
 	}
+	
+	public static Usuario recuperarUsuario(long id) {
+		
+		setUp();
+		
+		Usuario usuario = em.find(Usuario.class, id);
+		
+		close();
+		
+		return usuario;
+	}
 }
