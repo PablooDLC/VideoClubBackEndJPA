@@ -8,6 +8,9 @@ import javax.persistence.Persistence;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.ieschabas.clases.Pelicula;
+import org.ieschabas.enums.Categoria;
+import org.ieschabas.enums.Formato;
+import org.ieschabas.enums.Valoracion;
 import org.jboss.logging.Logger;
 
 public class PeliculaDao {
@@ -24,7 +27,7 @@ public class PeliculaDao {
 
 		// Indicamos al logger el fichero propiedades
 
-		PropertyConfigurator.configure("src/main/resources/log4.properties");
+		//PropertyConfigurator.configure("src/main/resources/log4.properties");
 	}
 
 	private static void close() {
@@ -36,7 +39,7 @@ public class PeliculaDao {
 
 		setUp();
 
-		if(pelicula.getId() != 0) {
+		if (pelicula.getId() != 0) {
 			pelicula = em.merge(pelicula);
 		}
 		em.persist(pelicula);
@@ -76,18 +79,17 @@ public class PeliculaDao {
 		return peliculas;
 
 	}
-	
+
 	public static void modificarPelicula(Pelicula pelicula) {
-		
+
 		setUp();
 		
-		pelicula = em.find(Pelicula.class, pelicula.getId());
-		
-		if(pelicula.getId() != 0) {
-			pelicula = em.merge(pelicula);
-		}
+		Pelicula peliculaActualizada;
+		peliculaActualizada = pelicula;
+
+		pelicula = em.merge(pelicula);
 		em.persist(pelicula);
-		
+
 		close();
 	}
 }

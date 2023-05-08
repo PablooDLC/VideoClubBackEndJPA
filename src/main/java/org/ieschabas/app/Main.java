@@ -25,21 +25,21 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Pelicula pelicula1 = new Pelicula("Pelicula1", "EEEEE", 2023, "2h", null, null, null);
+		Pelicula pelicula1 = new Pelicula("HOLA", "dddd", 2023, "2h", null, null, null);
 		PeliculaDao.guardarPelicula(pelicula1);
 		
-		//Equipo actor1 = new Actor("Pablo", "La", 2033, "esp");
-		//EquipoDao.guardarEquipo(actor1);
-		//Equipo director1 = new Director("Javi", "Cerv", 2222, "eng");
-		//EquipoDao.guardarEquipo(director1);
+		Equipo actor1 = new Actor("EEE", "La", 2033, "esp");
+		EquipoDao.guardarEquipo(actor1);
+		Equipo director1 = new Director("RR", "Cerv", 2222, "eng");
+		EquipoDao.guardarEquipo(director1);
 		
-		Usuario cliente1 = new Cliente("Pepe", "De", "Calle calle", true, "12-12-12");
+		Usuario cliente1 = new Cliente("asdas", "De", "Calle calle", true, "12-12-12");
 		UsuariosDao.guardarUsuario(cliente1);
 		
 
 		
-		Alquiler alquiler1 = new Alquiler(pelicula1, cliente1, new Date(24-24-24), new Date(23-23-23));
-		AlquilerDao.guardarAlquiler(alquiler1);
+		//Alquiler alquiler1 = new Alquiler(pelicula1, cliente1, new Date(24-24-24), new Date(23-23-23));
+		//AlquilerDao.guardarAlquiler(alquiler1);
 	
 		
 		LOGGER.info("Inicio de la aplicacion");

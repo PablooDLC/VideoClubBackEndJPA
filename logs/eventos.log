@@ -2564,3 +2564,269 @@ Caused by: java.sql.SQLException: Failed to add the foreign key constraint. Miss
 04-05-2023 21:15:52 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@22b82ddf] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 04-05-2023 21:15:52 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 04-05-2023 21:15:52 INFO  Main:45 - Inicio de la aplicacion
+05-05-2023 16:20:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+05-05-2023 16:20:17 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+05-05-2023 16:20:17 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+05-05-2023 16:20:17 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+05-05-2023 16:20:17 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+05-05-2023 16:20:17 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+05-05-2023 16:20:17 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+05-05-2023 16:20:17 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7ac5b4c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+05-05-2023 16:20:18 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-05-2023 16:20:18 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+05-05-2023 16:20:18 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+05-05-2023 16:20:18 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+05-05-2023 16:20:18 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+05-05-2023 16:20:18 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+05-05-2023 16:20:18 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+05-05-2023 16:20:18 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+05-05-2023 16:20:18 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@28bf82d9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+05-05-2023 16:20:18 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-05-2023 16:20:18 INFO  Main:45 - Inicio de la aplicacion
+05-05-2023 17:26:25 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+05-05-2023 17:26:25 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+05-05-2023 17:26:25 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+05-05-2023 17:26:25 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+05-05-2023 17:26:25 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+05-05-2023 17:26:25 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+05-05-2023 17:26:25 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+05-05-2023 17:26:25 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@150fc7a7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+05-05-2023 17:26:25 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-05-2023 17:26:25 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+05-05-2023 17:26:25 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+05-05-2023 17:26:25 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+05-05-2023 17:26:25 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+05-05-2023 17:26:25 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+05-05-2023 17:26:25 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+05-05-2023 17:26:25 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+05-05-2023 17:26:25 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@44ccd75c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+05-05-2023 17:26:25 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-05-2023 17:26:25 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 17:41:40 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:41:40 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:41:40 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:41:40 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:41:40 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:41:40 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:41:40 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:41:40 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20b829d5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:41:40 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:41:40 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:41:40 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:41:40 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:41:40 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:41:40 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:41:40 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:41:40 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:41:40 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1850f2da] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:41:40 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:41:40 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 17:46:09 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:46:09 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:46:09 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:46:09 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:46:09 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:46:09 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:46:09 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:46:09 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@376b5cb2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:46:09 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:46:09 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:46:09 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:46:09 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:46:09 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:46:09 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:46:09 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:46:09 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:46:09 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@75dc1c1c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:46:09 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:46:09 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 17:47:23 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:47:23 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:47:23 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:47:23 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:47:23 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:47:23 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:47:23 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:47:23 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@46b6701e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:47:23 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:47:23 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:47:23 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:47:23 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:47:23 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:47:23 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:47:23 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:47:23 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:47:23 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@68f776ee] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:47:23 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:47:23 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 17:53:42 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:53:42 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:53:42 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:53:42 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:53:42 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:53:42 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:53:42 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:53:43 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@32dcfeea] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:53:43 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:53:43 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:53:43 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:53:43 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:53:43 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:53:43 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:53:43 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:53:43 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:53:43 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4c030fe1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:53:43 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:53:43 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 17:54:31 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:54:31 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:54:31 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:54:31 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:54:31 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:54:31 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:54:31 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:54:31 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@106cd9c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:54:31 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:54:31 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:54:31 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:54:31 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:54:31 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:54:31 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:54:31 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:54:31 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:54:31 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5ba184fc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:54:31 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:54:31 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 17:55:09 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:55:09 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:55:09 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:55:09 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:55:09 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:55:09 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:55:09 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:55:09 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@71e2c6d8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:55:09 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:55:09 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:55:09 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:55:09 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:55:09 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:55:09 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:55:09 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:55:09 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:55:09 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@8af1c49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:55:09 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:55:09 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 17:57:13 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:57:13 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:57:13 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:57:13 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:57:13 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:57:13 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:57:13 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:57:13 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@71e2c6d8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:57:13 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:57:13 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:57:13 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:57:13 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:57:13 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:57:13 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:57:13 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:57:13 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:57:13 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@8af1c49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:57:13 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:57:13 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 17:59:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:59:17 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:59:17 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:59:17 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:59:17 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:59:17 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:59:17 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:59:17 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@376b5cb2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:59:17 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:59:17 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 17:59:17 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 17:59:17 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 17:59:17 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 17:59:17 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 17:59:17 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 17:59:17 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 17:59:17 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@23469199] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 17:59:17 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 17:59:17 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 18:02:21 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 18:02:21 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 18:02:21 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 18:02:21 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 18:02:21 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 18:02:21 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 18:02:21 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 18:02:21 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@71e2c6d8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 18:02:21 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 18:02:21 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 18:02:21 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 18:02:21 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 18:02:21 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 18:02:21 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 18:02:21 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 18:02:21 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 18:02:21 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@8af1c49] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 18:02:21 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 18:02:21 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 18:06:39 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 18:06:39 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 18:06:39 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 18:06:39 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 18:06:39 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 18:06:39 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 18:06:39 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 18:06:39 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@78318ac2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 18:06:39 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 18:06:39 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 18:06:39 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 18:06:39 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 18:06:39 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 18:06:39 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 18:06:39 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 18:06:39 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 18:06:39 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cfc0c48] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 18:06:39 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 18:06:39 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 18:10:31 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 18:10:31 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 18:10:31 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 18:10:31 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 18:10:31 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 18:10:31 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 18:10:31 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 18:10:31 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@78318ac2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 18:10:31 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 18:10:31 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 18:10:31 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 18:10:31 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 18:10:31 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 18:10:31 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 18:10:31 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 18:10:31 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 18:10:31 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cfc0c48] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 18:10:31 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 18:10:31 INFO  Main:45 - Inicio de la aplicacion
+08-05-2023 18:14:14 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 18:14:14 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 18:14:14 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 18:14:14 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 18:14:14 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 18:14:14 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 18:14:14 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 18:14:14 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@78318ac2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 18:14:14 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 18:14:14 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: videoClub]
+08-05-2023 18:14:14 WARN  pooling:75 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+08-05-2023 18:14:14 INFO  pooling:119 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/videoClub]
+08-05-2023 18:14:14 INFO  pooling:128 - HHH10001001: Connection properties: {password=****, user=root}
+08-05-2023 18:14:14 INFO  pooling:132 - HHH10001003: Autocommit mode: false
+08-05-2023 18:14:14 INFO  DriverManagerConnectionProviderImpl:322 - HHH000115: Hibernate connection pool size: 20 (min=1)
+08-05-2023 18:14:14 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+08-05-2023 18:14:14 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cfc0c48] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+08-05-2023 18:14:14 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-05-2023 18:14:14 INFO  Main:45 - Inicio de la aplicacion

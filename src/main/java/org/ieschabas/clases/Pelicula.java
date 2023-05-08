@@ -2,6 +2,7 @@ package org.ieschabas.clases;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -27,9 +28,9 @@ public class Pelicula {
 	private Categoria categoria;
 	private Formato formato;
 	private Valoracion valoracion;
-	private List<Equipo> actores;
-	private List<Equipo> directores;
-	//private List<Equipo> alquileres;
+	private Set<Equipo> actores;
+	private Set<Equipo> directores;
+	// private List<Equipo> alquileres;
 
 	/**
 	 * Constructor vacio
@@ -72,7 +73,7 @@ public class Pelicula {
 	public long getId() {
 		return id;
 	}
-	
+
 	public void setId(long id) {
 		this.id = id;
 	}
@@ -154,7 +155,7 @@ public class Pelicula {
 	 * 
 	 * @return
 	 */
-	
+
 	@Enumerated(EnumType.STRING)
 	public Categoria getCategoria() {
 		return categoria;
@@ -208,31 +209,34 @@ public class Pelicula {
 	}
 
 	@ManyToMany(cascade = CascadeType.MERGE)
-	public List<Equipo> getActores() {
+	@JoinTable(name = "peliActor", joinColumns = @JoinColumn(name = "id_Pelicula", referencedColumnName = "id"), 
+	inverseJoinColumns = @JoinColumn(name = "id_Actor", referencedColumnName = "id"))
+	public Set<Equipo> getActores() {
 		return actores;
 	}
 
-	public void setActores(List<Equipo> actores) {
+	public void setActores(Set<Equipo> actores) {
 		this.actores = actores;
 	}
-	
+
 	@ManyToMany(cascade = CascadeType.MERGE)
-	public List<Equipo> getDirectores() {
+	@JoinTable(name = "peliDirector", joinColumns = @JoinColumn(name = "id_Pelicula", referencedColumnName = "id"), 
+	inverseJoinColumns = @JoinColumn(name = "id_Director", referencedColumnName = "id"))
+	public Set<Equipo> getDirectores() {
 		return directores;
 	}
 
-	public void setDirectores(List<Equipo> directores) {
+	public void setDirectores(Set<Equipo> directores) {
 		this.directores = directores;
 	}
 
-	/*@OneToMany(cascade = CascadeType.MERGE)
-	public List<Equipo> getAlquileres() {
-		return alquileres;
-	}
-
-	public void setAlquileres(List<Equipo> alquileres) {
-		this.alquileres = alquileres;
-	}*/
+	/*
+	 * @OneToMany(cascade = CascadeType.MERGE) public List<Equipo> getAlquileres() {
+	 * return alquileres; }
+	 * 
+	 * public void setAlquileres(List<Equipo> alquileres) { this.alquileres =
+	 * alquileres; }
+	 */
 
 	@Override
 	public int hashCode() {
@@ -260,7 +264,5 @@ public class Pelicula {
 				+ añopublicacion + ", duracion=" + duracion + ", categoria=" + categoria + ", formato=" + formato
 				+ ", valoracion=" + valoracion + "]";
 	}
-	
-	
 
 }

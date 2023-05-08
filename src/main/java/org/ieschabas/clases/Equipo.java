@@ -1,5 +1,6 @@
 package org.ieschabas.clases;
 
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.*;
@@ -23,6 +24,8 @@ public class Equipo {
 	private String pais;
 	@Transient
 	private transient String rol;
+	private List<Pelicula> actorPeli;
+	private List<Pelicula> directorPeli;
 
 	/**
 	 * Constructor vacio
@@ -151,6 +154,24 @@ public class Equipo {
 
 	public void setRol(String rol) {
 		this.rol = rol;
+	}
+	
+	@ManyToMany(mappedBy = "actores", fetch = FetchType.LAZY)
+	public List<Pelicula> getActorPeli() {
+		return actorPeli;
+	}
+
+	public void setActorPeli(List<Pelicula> actorPeli) {
+		this.actorPeli = actorPeli;
+	}
+
+	@ManyToMany(mappedBy = "directores", fetch = FetchType.LAZY)
+	public List<Pelicula> getDirectorPeli() {
+		return directorPeli;
+	}
+
+	public void setDirectorPeli(List<Pelicula> directorPeli) {
+		this.directorPeli = directorPeli;
 	}
 
 	@Override

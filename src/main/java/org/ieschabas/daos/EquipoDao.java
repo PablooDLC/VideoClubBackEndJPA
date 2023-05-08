@@ -15,7 +15,8 @@ public class EquipoDao {
 	private static final Logger LOGGER = Logger.getLogger(EquipoDao.class);
 	private static EntityManager em;
 	private static EntityManagerFactory emf;
-	private static final String SQL_BUSQUEDA_EVENTO = "SELECT e FROM Equipo e";
+	private static final String SQL_BUSQUEDA_ACTOR = "SELECT e FROM Equipo e where rol =  : Actor";
+	private static final String SQL_BUSQUEDA_DIRECTOR = "SELECT e FROM Equipo e where  rol = : Director";
 
 	private static void setUp() {
 		emf = Persistence.createEntityManagerFactory("videoClub");
@@ -54,15 +55,15 @@ public class EquipoDao {
 		close();
 	}
 
-	public static List<Equipo> ObtenerEquipo() {
+	public static List<Equipo> ObtenerActor(String rol) {
 		setUp();
 
-		List<Equipo> equipos = em.createQuery(SQL_BUSQUEDA_EVENTO, Equipo.class).getResultList();
+		List<Equipo> actores = em.createQuery(SQL_BUSQUEDA_ACTOR, Equipo.class).setParameter("Actor", rol).getResultList();
 
-		if (equipos.isEmpty()) {
+		if (actores.isEmpty()) {
 			LOGGER.info("No hay datos en la tabla equipo");
 		} else {
-			for (Equipo equipo : equipos) {
+			for (Equipo equipo : actores) {
 				LOGGER.info(equipo.getId() + "--" + equipo.getNombre() + "--" + equipo.getApellidos() + "--"
 						+ equipo.getAnyoNac() + "--" + equipo.getPais() + "--" + equipo.getRol());
 			}
@@ -70,7 +71,27 @@ public class EquipoDao {
 
 		close();
 
-		return equipos;
+		return actores;
+
+	}
+	
+	public static List<Equipo> ObtenerDirector(String rol) {
+		setUp();
+
+		List<Equipo> directores = em.createQuery(SQL_BUSQUEDA_DIRECTOR, Equipo.class).setParameter("Director", rol).getResultList();
+
+		if (directores.isEmpty()) {
+			LOGGER.info("No hay datos en la tabla equipo");
+		} else {
+			for (Equipo equipo : directores) {
+				LOGGER.info(equipo.getId() + "--" + equipo.getNombre() + "--" + equipo.getApellidos() + "--"
+						+ equipo.getAnyoNac() + "--" + equipo.getPais() + "--" + equipo.getRol());
+			}
+		}
+
+		close();
+
+		return directores;
 
 	}
 	
