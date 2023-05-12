@@ -2,6 +2,8 @@ package org.ieschabas.daos;
 
 import org.ieschabas.clases.Usuario;
 import org.jboss.logging.Logger;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -13,7 +15,7 @@ public class UsuariosDao {
 	private static final Logger LOGGER = Logger.getLogger(UsuariosDao.class);
 	private static EntityManager em;
 	private static EntityManagerFactory emf;
-	private static final String QUERY_BUSQUEDA_USUARIO = "SELECT u FROM usuario";
+	private static final String QUERY_BUSQUEDA_USUARIO = "SELECT u FROM Usuario u";
 
 	private static void setUp() {
 		emf = Persistence.createEntityManagerFactory("videoClub");
@@ -54,10 +56,10 @@ public class UsuariosDao {
 		close();
 	}
 
-	public static List<Usuario> ObtenerUsuario() {
+	public static List<Usuario> obtenerUsuario() {
 		setUp();
-
-		List<Usuario> usuarios = em.createQuery(QUERY_BUSQUEDA_USUARIO, Usuario.class).getResultList();
+		List<Usuario> usuarios = new ArrayList<Usuario>();
+		usuarios = em.createQuery(QUERY_BUSQUEDA_USUARIO, Usuario.class).getResultList();
 
 		if (usuarios.isEmpty()) {
 			LOGGER.info("No hay datos en la tabla usuarios");

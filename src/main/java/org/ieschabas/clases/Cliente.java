@@ -4,7 +4,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue(value = "Cliente")
+@DiscriminatorValue(value = "ROLE_USER")
 public class Cliente extends Usuario {
 
 	public Cliente() {
@@ -12,8 +12,8 @@ public class Cliente extends Usuario {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cliente(String nombre, String apellidos, String direccion, boolean activo, String fechaRegistro) {
-		super(nombre, apellidos, direccion, activo, fechaRegistro);
+	public Cliente(String nombre, String apellidos, String email, String password, boolean activo, String fechaRegistro) {
+		super(nombre, apellidos, email, password, activo, fechaRegistro);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -1,5 +1,6 @@
 package org.ieschabas.clases;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public class Alquiler {
 	})*/
 	private AlquilerId idCompuesta;
 	private long idAlquiler;
-	private Date fechaRetorno;
+	private LocalDate fechaRetorno;
 	
 	public Alquiler() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Alquiler(Pelicula pelicula, Usuario usuario, Date fechaAlquiler, Date fechaRetorno) {
+	public Alquiler(Pelicula pelicula, Usuario usuario, LocalDate fechaAlquiler, LocalDate LocalfechaRetorno) {
 		super();
 		this.idCompuesta = new AlquilerId(pelicula, usuario, fechaAlquiler);
 		this.fechaRetorno = fechaRetorno;
@@ -47,11 +48,11 @@ public class Alquiler {
 		this.idAlquiler = idAlquiler;
 	}
 
-	public Date getFechaRetorno() {
+	public LocalDate getFechaRetorno() {
 		return fechaRetorno;
 	}
 
-	public void setFechaRetorno(Date fechaRetorno) {
+	public void setFechaRetorno(LocalDate fechaRetorno) {
 		this.fechaRetorno = fechaRetorno;
 	}
 

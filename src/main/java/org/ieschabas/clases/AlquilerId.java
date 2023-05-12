@@ -1,6 +1,7 @@
 package org.ieschabas.clases;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ import javax.persistence.ManyToOne;
 @Embeddable
 public class AlquilerId implements Serializable {
 
-	private Date fechaAlquiler;
+	private LocalDate fechaAlquiler;
 	private Usuario idCliente;
 	private Pelicula idPelicula;
 
@@ -23,18 +24,18 @@ public class AlquilerId implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AlquilerId(Pelicula idPelicula, Usuario idCliente, Date fechaAlquiler) {
+	public AlquilerId(Pelicula idPelicula, Usuario idCliente, LocalDate fechaAlquiler) {
 		super();
 		this.fechaAlquiler = fechaAlquiler;
 		this.idCliente = idCliente;
 		this.idPelicula = idPelicula;
 	}
 
-	public Date getFechaAlquiler() {
+	public LocalDate getFechaAlquiler() {
 		return fechaAlquiler;
 	}
 
-	public void setFechaAlquiler(Date fechaAlquiler) {
+	public void setFechaAlquiler(LocalDate fechaAlquiler) {
 		this.fechaAlquiler = fechaAlquiler;
 	}
 
