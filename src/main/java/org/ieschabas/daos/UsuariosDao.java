@@ -16,6 +16,7 @@ public class UsuariosDao {
 	private static EntityManager em;
 	private static EntityManagerFactory emf;
 	private static final String QUERY_BUSQUEDA_USUARIO = "SELECT u FROM Usuario u";
+	private static final String QUERY_BUSQUEDA_EMAIL_USUARIO = "SELECT u FROM Usuario u where email = :email";
 
 	private static void setUp() {
 		emf = Persistence.createEntityManagerFactory("videoClub");
@@ -74,6 +75,18 @@ public class UsuariosDao {
 		return usuarios;
 
 	}
+
+	public static Usuario obtenerUsuarioEmail(String email) {
+
+		setUp();
+
+		Usuario usuario = em.createQuery(QUERY_BUSQUEDA_EMAIL_USUARIO, Usuario.class).setParameter("email", email).getSingleResult();
+
+		close();
+
+		return usuario;
+	}
+
 	
 	public static Usuario recuperarUsuario(long id) {
 		

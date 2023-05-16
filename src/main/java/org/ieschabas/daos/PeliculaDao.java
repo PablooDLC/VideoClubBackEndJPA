@@ -44,8 +44,6 @@ public class PeliculaDao {
 		}
 		em.persist(pelicula);
 
-		// LOGGER.info("Identificador de la pelicula: " + pelicula.getId());
-
 		close();
 
 	}
@@ -59,7 +57,7 @@ public class PeliculaDao {
 		close();
 	}
 
-	public static List<Pelicula> ObtenerPelicula() {
+	public static List<Pelicula> obtenerPelicula() {
 		setUp();
 
 		List<Pelicula> peliculas = em.createQuery(SQL_BUSQUEDA_PELICULA, Pelicula.class).getResultList();

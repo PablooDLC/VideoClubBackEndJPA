@@ -56,7 +56,7 @@ public class EquipoDao {
 		close();
 	}
 
-	public static List<Equipo> ObtenerActor(String rol) {
+	public static List<Equipo> obtenerActor(String rol) {
 		setUp();
 
 		List<Equipo> actores = em.createQuery(SQL_BUSQUEDA_ACTOR, Equipo.class).setParameter("Actor", rol).getResultList();
@@ -76,7 +76,7 @@ public class EquipoDao {
 
 	}
 	
-	public static List<Equipo> ObtenerDirector(String rol) {
+	public static List<Equipo> obtenerDirector(String rol) {
 		setUp();
 
 		List<Equipo> directores = em.createQuery(SQL_BUSQUEDA_DIRECTOR, Equipo.class).setParameter("Director", rol).getResultList();
@@ -96,7 +96,7 @@ public class EquipoDao {
 
 	}
 	
-	public static List<Equipo> ObtenerEquipo() {
+	public static List<Equipo> obtenerEquipo() {
 		setUp();
 
 		List<Equipo> equipos = em.createQuery(SQL_BUSQUEDA_EQUIPO, Equipo.class).getResultList();
