@@ -2830,3 +2830,148 @@ Caused by: java.sql.SQLException: Failed to add the foreign key constraint. Miss
 08-05-2023 18:14:14 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cfc0c48] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 08-05-2023 18:14:14 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 08-05-2023 18:14:14 INFO  Main:45 - Inicio de la aplicacion
+19-05-2023 10:37:35 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 10:37:35 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 10:40:28 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 10:40:28 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 10:44:12 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 10:44:12 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 10:47:38 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 10:47:38 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 10:50:39 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 10:50:40 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 10:53:30 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 10:53:30 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:17:10 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 19:17:10 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:17:31 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 19:17:31 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:19:45 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 19:19:46 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:27:38 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 19:27:38 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:38:14 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 19:38:14 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:40:16 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 19:40:16 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:48:27 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 19:48:28 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:50:18 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+19-05-2023 19:50:18 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+19-05-2023 19:52:38 INFO  EquipoDao:105 - No hay datos en la tabla equipo
+19-05-2023 19:52:38 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+20-05-2023 10:54:23 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+20-05-2023 10:54:23 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+20-05-2023 10:54:42 INFO  EquipoDao:105 - No hay datos en la tabla equipo
+20-05-2023 10:54:42 INFO  EquipoDao:65 - No hay datos en la tabla equipo
+20-05-2023 10:55:00 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:55:01 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+20-05-2023 10:55:01 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:55:02 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:55:44 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:55:44 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:55:44 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+20-05-2023 10:55:44 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:55:44 INFO  EquipoDao:108 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:55:45 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:55:45 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:55:49 INFO  EquipoDao:85 - No hay datos en la tabla equipo
+20-05-2023 10:56:09 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:56:09 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:56:09 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:56:10 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:56:10 INFO  EquipoDao:108 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:56:10 INFO  EquipoDao:108 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:56:10 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:56:41 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:56:41 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:56:42 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:56:42 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 10:56:42 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:56:42 INFO  EquipoDao:108 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:56:42 INFO  EquipoDao:108 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:56:42 INFO  EquipoDao:108 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 10:56:43 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:56:43 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 10:56:47 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:56:47 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:56:48 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:56:48 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 10:59:48 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:59:48 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:59:48 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:59:48 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 10:59:49 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 10:59:49 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 10:59:50 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 10:59:50 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:02:26 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:02:26 INFO  EquipoDao:108 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:02:26 INFO  EquipoDao:108 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:02:26 INFO  EquipoDao:108 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:02:26 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:02:26 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:10:08 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:10:08 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:10:09 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:10:09 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:10:47 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:10:47 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:10:48 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:10:48 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:14:54 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:14:54 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:14:55 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:14:55 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:15:14 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:15:14 INFO  EquipoDao:108 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:15:14 INFO  EquipoDao:108 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:15:14 INFO  EquipoDao:108 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:15:15 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:15:15 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:15:22 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:15:22 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:15:35 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:15:35 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:15:36 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:15:36 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:15:42 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:15:42 INFO  EquipoDao:108 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:15:42 INFO  EquipoDao:108 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:15:42 INFO  EquipoDao:108 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:15:43 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:15:43 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:15:48 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:15:48 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:16:01 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:16:01 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:16:01 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:16:01 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:27:22 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:27:22 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:27:23 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:27:23 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:27:31 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:27:31 INFO  EquipoDao:108 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:27:31 INFO  EquipoDao:108 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:27:31 INFO  EquipoDao:108 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:27:32 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:27:32 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:30:14 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:30:14 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:30:14 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:30:14 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:35:49 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:35:49 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:35:50 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:35:50 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:36:36 INFO  EquipoDao:108 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:36:36 INFO  EquipoDao:108 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:36:36 INFO  EquipoDao:108 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:36:36 INFO  EquipoDao:108 - 12--Alex--Palacios--1995--España--Director
+20-05-2023 11:36:36 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:36:36 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:50:04 INFO  EquipoDao:68 - 9--Pablo--De La Cruz--2004--España--Actor
+20-05-2023 11:50:04 INFO  EquipoDao:68 - 10--Brad--Pitt--1963--EEUU--Actor
+20-05-2023 11:50:05 INFO  EquipoDao:88 - 11--Silvia--Carrasco--2003--España--Director
+20-05-2023 11:50:05 INFO  EquipoDao:88 - 12--Alex--Palacios--1995--España--Director

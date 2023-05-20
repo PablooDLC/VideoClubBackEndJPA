@@ -1,11 +1,14 @@
 package org.ieschabas.daos;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.log4j.PropertyConfigurator;
 import org.ieschabas.clases.Pelicula;
 import org.ieschabas.enums.Categoria;
@@ -19,6 +22,7 @@ public class PeliculaDao {
 	private static EntityManager em;
 	private static EntityManagerFactory emf;
 	private static final String SQL_BUSQUEDA_PELICULA = "SELECT p FROM Pelicula p";
+	private static final String SQL_BUSQUEDA_PELICULA_TITULO = "SELECT p FROM Pelicula p where titulo = : titulo";
 
 	private static void setUp() {
 		emf = Persistence.createEntityManagerFactory("videoClub");
@@ -76,6 +80,15 @@ public class PeliculaDao {
 
 		return peliculas;
 
+	}
+
+	public static Pelicula obtenerPeliculaPorTitulo(String titulo) {
+		setUp();
+
+		Pelicula pelicula = em.createQuery(SQL_BUSQUEDA_PELICULA_TITULO, Pelicula.class).setParameter("titulo", titulo).getSingleResult();
+
+		close();
+		return pelicula;
 	}
 
 	public static void modificarPelicula(Pelicula pelicula) {

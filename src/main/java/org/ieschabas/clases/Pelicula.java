@@ -31,6 +31,7 @@ public class Pelicula {
 	private Set<Equipo> actores;
 	private Set<Equipo> directores;
 	// private List<Equipo> alquileres;
+	private byte[] imagenByte;
 
 	/**
 	 * Constructor vacio
@@ -42,7 +43,6 @@ public class Pelicula {
 	/**
 	 * Constructor sobrecargado
 	 * 
-	 * @param id
 	 * @param titulo
 	 * @param descripcion
 	 * @param añopublicacion
@@ -208,7 +208,7 @@ public class Pelicula {
 		this.valoracion = valoracion;
 	}
 
-	@ManyToMany(cascade = CascadeType.MERGE)
+	@ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
 	@JoinTable(name = "peliActor", joinColumns = @JoinColumn(name = "id_Pelicula", referencedColumnName = "id"), 
 	inverseJoinColumns = @JoinColumn(name = "id_Actor", referencedColumnName = "id"))
 	public Set<Equipo> getActores() {
@@ -219,7 +219,7 @@ public class Pelicula {
 		this.actores = actores;
 	}
 
-	@ManyToMany(cascade = CascadeType.MERGE)
+	@ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
 	@JoinTable(name = "peliDirector", joinColumns = @JoinColumn(name = "id_Pelicula", referencedColumnName = "id"), 
 	inverseJoinColumns = @JoinColumn(name = "id_Director", referencedColumnName = "id"))
 	public Set<Equipo> getDirectores() {
@@ -237,6 +237,14 @@ public class Pelicula {
 	 * public void setAlquileres(List<Equipo> alquileres) { this.alquileres =
 	 * alquileres; }
 	 */
+	@Lob
+	public byte[] getImagenByte() {
+		return imagenByte;
+	}
+
+	public void setImagenByte(byte[] imagenByte) {
+		this.imagenByte = imagenByte;
+	}
 
 	@Override
 	public int hashCode() {

@@ -6,9 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.ieschabas.clases.Equipo;
-import org.jboss.logging.Logger;
 
 public class EquipoDao {
 
