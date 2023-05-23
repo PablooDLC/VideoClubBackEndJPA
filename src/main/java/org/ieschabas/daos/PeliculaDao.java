@@ -10,6 +10,7 @@ import javax.persistence.Persistence;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.PropertyConfigurator;
+import org.ieschabas.clases.Equipo;
 import org.ieschabas.clases.Pelicula;
 import org.ieschabas.enums.Categoria;
 import org.ieschabas.enums.Formato;
@@ -91,12 +92,17 @@ public class PeliculaDao {
 		return pelicula;
 	}
 
+	public static List<Equipo> obtenerActorPorPelicula(Pelicula pelicula) {
+
+		setUp();
+		List<Equipo> actores = em.createQuery("SELECT a FROM Equipo a JOIN a.titulo p WHERE p = :titulo", Equipo.class).setParameter("pelicula", pelicula).getResultList();
+		close();
+		return actores;
+	}
+
 	public static void modificarPelicula(Pelicula pelicula) {
 
 		setUp();
-		
-		Pelicula peliculaActualizada;
-		peliculaActualizada = pelicula;
 
 		pelicula = em.merge(pelicula);
 		em.persist(pelicula);

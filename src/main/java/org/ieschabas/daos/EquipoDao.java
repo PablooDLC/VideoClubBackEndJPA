@@ -119,12 +119,8 @@ public class EquipoDao {
 	public static void modificarEquipo(Equipo equipo) {
 		
 		setUp();
-		
-		eliminarEquipo(equipo);
-		
-		if(equipo.getId() != 0) {
-			equipo = em.merge(equipo);
-		}
+
+		equipo = em.merge(equipo);
 		em.persist(equipo);
 		
 		close();
