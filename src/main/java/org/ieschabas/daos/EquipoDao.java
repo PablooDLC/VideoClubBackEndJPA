@@ -6,9 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.ieschabas.clases.Equipo;
-import org.jboss.logging.Logger;
 
 public class EquipoDao {
 
@@ -56,7 +56,7 @@ public class EquipoDao {
 		close();
 	}
 
-	public static List<Equipo> ObtenerActor(String rol) {
+	public static List<Equipo> obtenerActor(String rol) {
 		setUp();
 
 		List<Equipo> actores = em.createQuery(SQL_BUSQUEDA_ACTOR, Equipo.class).setParameter("Actor", rol).getResultList();
@@ -76,7 +76,7 @@ public class EquipoDao {
 
 	}
 	
-	public static List<Equipo> ObtenerDirector(String rol) {
+	public static List<Equipo> obtenerDirector(String rol) {
 		setUp();
 
 		List<Equipo> directores = em.createQuery(SQL_BUSQUEDA_DIRECTOR, Equipo.class).setParameter("Director", rol).getResultList();
@@ -96,7 +96,7 @@ public class EquipoDao {
 
 	}
 	
-	public static List<Equipo> ObtenerEquipo() {
+	public static List<Equipo> obtenerEquipo() {
 		setUp();
 
 		List<Equipo> equipos = em.createQuery(SQL_BUSQUEDA_EQUIPO, Equipo.class).getResultList();
@@ -119,12 +119,8 @@ public class EquipoDao {
 	public static void modificarEquipo(Equipo equipo) {
 		
 		setUp();
-		
-		eliminarEquipo(equipo);
-		
-		if(equipo.getId() != 0) {
-			equipo = em.merge(equipo);
-		}
+
+		equipo = em.merge(equipo);
 		em.persist(equipo);
 		
 		close();

@@ -1,8 +1,8 @@
 package org.ieschabas.clases;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Objects;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -18,13 +18,12 @@ public class Alquiler {
 	private AlquilerId idCompuesta;
 	private long idAlquiler;
 	private LocalDate fechaRetorno;
-	
+
 	public Alquiler() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public Alquiler(Pelicula pelicula, Usuario usuario, LocalDate fechaAlquiler, LocalDate LocalfechaRetorno) {
+	public Alquiler(Pelicula pelicula, Usuario usuario, LocalDate fechaAlquiler, LocalDate fechaRetorno) {
 		super();
 		this.idCompuesta = new AlquilerId(pelicula, usuario, fechaAlquiler);
 		this.fechaRetorno = fechaRetorno;

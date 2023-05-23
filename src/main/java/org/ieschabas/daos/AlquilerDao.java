@@ -32,9 +32,10 @@ public class AlquilerDao {
 		
 		setUp();
 		
-		if(alquiler.getIdCompuesta() != null) {
+		/*if(alquiler.getIdCompuesta() != null) {
 			alquiler = em.merge(alquiler);
-		}
+		}*/
+		alquiler = em.merge(alquiler);
 		em.persist(alquiler);
 		
 		close();
