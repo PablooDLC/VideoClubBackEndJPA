@@ -23,23 +23,22 @@ import org.jboss.logging.Logger;
 
 public class Main {
 
-	private static final Logger LOGGER = Logger.getLogger(Main.class);
-	
-	//private static BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
+    private static final Logger LOGGER = Logger.getLogger(Main.class);
 
-	
+    //private static BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(16);
 
-	public static void main(String[] args) {
+
+    public static void main(String[] args) {
 		
 		/*Usuario user1 = new Cliente("pablo","si","pablo@gmail.com","1234",true,"12213");
 		Usuario user2 = new Administrador("admin","si","admin@gmail.com","1234",true,"12213");
 		UsuariosDao.guardarUsuario(user1);
 		UsuariosDao.guardarUsuario(user2);*/
-		List<Usuario> usuarios = new ArrayList();
-		usuarios = UsuariosDao.obtenerUsuario();
-		for(Usuario user: usuarios) {
-			System.out.println(user.toString());
-		}
+        List<Usuario> usuarios = new ArrayList();
+        usuarios = UsuariosDao.obtenerUsuario();
+        for (Usuario user : usuarios) {
+            System.out.println(user.toString());
+        }
 		
 /*
 		Usuario cliente = new Cliente("Cliente", "Gomez", "cliente@cliente.com", "1234", true, "12-12-12");
@@ -52,14 +51,14 @@ public class Main {
 		UsuariosDao.guardarUsuario(admin);
 		
 */
-		
-		//Alquiler alquiler1 = new Alquiler(pelicula1, cliente1, new Date(24-24-24), new Date(23-23-23));
-		//AlquilerDao.guardarAlquiler(alquiler1);
-	
-		
-		LOGGER.info("Inicio de la aplicacion");
 
-		
-	}
+        //Alquiler alquiler1 = new Alquiler(pelicula1, cliente1, new Date(24-24-24), new Date(23-23-23));
+        //AlquilerDao.guardarAlquiler(alquiler1);
+
+
+        LOGGER.info("Inicio de la aplicacion");
+
+
+    }
 
 }

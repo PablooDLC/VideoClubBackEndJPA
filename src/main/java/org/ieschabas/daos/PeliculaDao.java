@@ -2,6 +2,7 @@ package org.ieschabas.daos;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -19,94 +20,134 @@ import org.jboss.logging.Logger;
 
 public class PeliculaDao {
 
-	private static final Logger LOGGER = Logger.getLogger(PeliculaDao.class);
-	private static EntityManager em;
-	private static EntityManagerFactory emf;
-	private static final String SQL_BUSQUEDA_PELICULA = "SELECT p FROM Pelicula p";
-	private static final String SQL_BUSQUEDA_PELICULA_TITULO = "SELECT p FROM Pelicula p where titulo = : titulo";
+    private static final Logger LOGGER = Logger.getLogger(PeliculaDao.class);
+    private static EntityManager em;
+    private static EntityManagerFactory emf;
+    private static final String SQL_BUSQUEDA_PELICULA = "SELECT p FROM Pelicula p";
+    private static final String SQL_BUSQUEDA_PELICULA_TITULO = "SELECT p FROM Pelicula p WHERE titulo = :titulo";
 
-	private static void setUp() {
-		emf = Persistence.createEntityManagerFactory("videoClub");
-		em = emf.createEntityManager();
-		em.getTransaction().begin();
+    private static void setUp() {
 
-		// Indicamos al logger el fichero propiedades
+        // Indicamos al logger el fichero propiedades
+        PropertyConfigurator.configure("src/main/resources/log4.properties");
 
-		//PropertyConfigurator.configure("src/main/resources/log4.properties");
-	}
+        try {
+            emf = Persistence.createEntityManagerFactory("videoClub");
+            em = emf.createEntityManager();
+            em.getTransaction().begin();
 
-	private static void close() {
-		em.getTransaction().commit();
-		em.close();
-	}
+        } catch (Exception e) {
+            LOGGER.error("Error en el método setUp(): " + e.getMessage());
+        }
+    }
 
-	public static void guardarPelicula(Pelicula pelicula) {
+    private static void close() {
+        try {
+            em.getTransaction().commit();
+            em.close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método close(): " + e.getMessage());
+        }
+    }
 
-		setUp();
+    public static void guardarPelicula(Pelicula pelicula) {
+        try {
+            setUp();
 
-		if (pelicula.getId() != 0) {
-			pelicula = em.merge(pelicula);
-		}
-		em.persist(pelicula);
+            if (pelicula.getId() != 0) {
+                pelicula = em.merge(pelicula);
+            }
+            em.persist(pelicula);
 
-		close();
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método guardarPelicula(): " + e.getMessage());
+        }
+    }
 
-	}
+    public static void eliminarPelicula(Pelicula pelicula) {
+        try {
+            setUp();
 
-	public static void eliminarPelicula(Pelicula pelicula) {
-		setUp();
+            pelicula = em.merge(pelicula);
+            em.remove(pelicula);
 
-		pelicula = em.merge(pelicula);
-		em.remove(pelicula);
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método eliminarPelicula(): " + e.getMessage());
+        }
+    }
 
-		close();
-	}
+    public static List<Pelicula> obtenerPelicula() {
+        List<Pelicula> peliculas = new ArrayList<>();
 
-	public static List<Pelicula> obtenerPelicula() {
-		setUp();
+        try {
+            setUp();
 
-		List<Pelicula> peliculas = em.createQuery(SQL_BUSQUEDA_PELICULA, Pelicula.class).getResultList();
+            peliculas = em.createQuery(SQL_BUSQUEDA_PELICULA, Pelicula.class).getResultList();
 
-		if (peliculas.isEmpty()) {
-			LOGGER.info("No hay datos en la tabla equipo");
-		} else {
-			for (Pelicula pelicula : peliculas) {
-				LOGGER.info(pelicula.getId() + "--" + pelicula.getTitulo() + "--" + pelicula.getDescripcion() + "--"
-						+ pelicula.getDuracion() + "--" + pelicula.getAñopublicacion() + pelicula.getCategoria() + "--"
-						+ pelicula.getFormato() + "--" + pelicula.getValoracion());
-			}
-		}
+            if (peliculas.isEmpty()) {
+                LOGGER.info("No hay datos en la tabla equipo");
+            } else {
+                for (Pelicula pelicula : peliculas) {
+                    LOGGER.info(pelicula.getId() + "--" + pelicula.getTitulo() + "--" + pelicula.getDescripcion() + "--"
+                            + pelicula.getDuracion() + "--" + pelicula.getAñopublicacion() + pelicula.getCategoria() + "--"
+                            + pelicula.getFormato() + "--" + pelicula.getValoracion());
+                }
+            }
 
-		close();
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método obtenerPelicula(): " + e.getMessage());
+        }
 
-		return peliculas;
+        return peliculas;
+    }
 
-	}
+    public static Pelicula obtenerPeliculaPorTitulo(String titulo) {
+        Pelicula pelicula = null;
 
-	public static Pelicula obtenerPeliculaPorTitulo(String titulo) {
-		setUp();
+        try {
+            setUp();
 
-		Pelicula pelicula = em.createQuery(SQL_BUSQUEDA_PELICULA_TITULO, Pelicula.class).setParameter("titulo", titulo).getSingleResult();
+            pelicula = em.createQuery(SQL_BUSQUEDA_PELICULA_TITULO, Pelicula.class)
+                    .setParameter("titulo", titulo).getSingleResult();
 
-		close();
-		return pelicula;
-	}
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método obtenerPeliculaPorTitulo(): " + e.getMessage());
+        }
 
-	public static List<Equipo> obtenerActorPorPelicula(Pelicula pelicula) {
+        return pelicula;
+    }
 
-		setUp();
-		List<Equipo> actores = em.createQuery("SELECT a FROM Equipo a JOIN a.titulo p WHERE p = :titulo", Equipo.class).setParameter("pelicula", pelicula).getResultList();
-		close();
-		return actores;
-	}
+    public static List<Equipo> obtenerActorPorPelicula(Pelicula pelicula) {
+        List<Equipo> actores = new ArrayList<>();
 
-	public static void modificarPelicula(Pelicula pelicula) {
+        try {
+            setUp();
 
-		setUp();
+            actores = em.createQuery("SELECT a FROM Equipo a JOIN a.titulo p WHERE p = :titulo", Equipo.class)
+                    .setParameter("pelicula", pelicula).getResultList();
 
-		pelicula = em.merge(pelicula);
-		em.persist(pelicula);
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método obtenerActorPorPelicula(): " + e.getMessage());
+        }
 
-		close();
-	}
+        return actores;
+    }
+
+    public static void modificarPelicula(Pelicula pelicula) {
+        try {
+            setUp();
+
+            pelicula = em.merge(pelicula);
+            em.persist(pelicula);
+
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método modificarPelicula(): " + e.getMessage());
+        }
+    }
 }

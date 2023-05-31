@@ -1,5 +1,6 @@
 package org.ieschabas.daos;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.ieschabas.clases.Usuario;
 import org.jboss.logging.Logger;
 
@@ -12,90 +13,117 @@ import javax.persistence.Persistence;
 
 public class UsuariosDao {
 
-	private static final Logger LOGGER = Logger.getLogger(UsuariosDao.class);
-	private static EntityManager em;
-	private static EntityManagerFactory emf;
-	private static final String QUERY_BUSQUEDA_USUARIO = "SELECT u FROM Usuario u";
-	private static final String QUERY_BUSQUEDA_EMAIL_USUARIO = "SELECT u FROM Usuario u where email = :email";
+    private static final Logger LOGGER = Logger.getLogger(UsuariosDao.class);
+    private static EntityManager em;
+    private static EntityManagerFactory emf;
+    private static final String QUERY_BUSQUEDA_USUARIO = "SELECT u FROM Usuario u";
+    private static final String QUERY_BUSQUEDA_EMAIL_USUARIO = "SELECT u FROM Usuario u WHERE email = :email";
 
-	private static void setUp() {
-		emf = Persistence.createEntityManagerFactory("videoClub");
-		em = emf.createEntityManager();
-		em.getTransaction().begin();
+    private static void setUp() {
 
-		// Indicamos al logger el fichero propiedades
+        // Indicamos al logger el fichero propiedades
+        PropertyConfigurator.configure("src/main/resources/log4.properties");
+        try {
+            emf = Persistence.createEntityManagerFactory("videoClub");
+            em = emf.createEntityManager();
+            em.getTransaction().begin();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método setUp(): " + e.getMessage());
+        }
+    }
 
-		//PropertyConfigurator.configure("src/main/resources/log4.properties");
-	}
+    private static void close() {
+        try {
+            em.getTransaction().commit();
+            em.close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método close(): " + e.getMessage());
+        }
+    }
 
-	private static void close() {
-		em.getTransaction().commit();
-		em.close();
-	}
+    public static void guardarUsuario(Usuario usuario) {
+        try {
+            setUp();
 
-	public static void guardarUsuario(Usuario usuario) {
+            if (usuario.getId() != 0) {
+                usuario = em.merge(usuario);
+            }
+            em.persist(usuario);
 
-		setUp();
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método guardarUsuario(): " + e.getMessage());
+        }
+    }
 
-		if (usuario.getId() != 0) {
-			usuario = em.merge(usuario);
-		}
-		em.persist(usuario);
+    public static void eliminarUsuario(Usuario usuario) {
+        try {
+            setUp();
 
-		close();
+            if (usuario.getId() != 0) {
+                usuario = em.merge(usuario);
+            }
+            em.remove(usuario);
 
-	}
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método eliminarUsuario(): " + e.getMessage());
+        }
+    }
 
-	public static void eliminarUsuario(Usuario usuario) {
-		setUp();
+    public static List<Usuario> obtenerUsuario() {
+        List<Usuario> usuarios = new ArrayList<>();
 
-		if (usuario.getId() != 0) {
-			usuario = em.merge(usuario);
-		}
-		em.remove(usuario);
+        try {
+            setUp();
+            usuarios = em.createQuery(QUERY_BUSQUEDA_USUARIO, Usuario.class).getResultList();
 
-		close();
-	}
+            if (usuarios.isEmpty()) {
+                LOGGER.info("No hay datos en la tabla usuarios");
+            } else {
+                for (Usuario usuario : usuarios) {
+                    LOGGER.info(usuario.getId() + "--");
+                }
+            }
 
-	public static List<Usuario> obtenerUsuario() {
-		setUp();
-		List<Usuario> usuarios = new ArrayList<Usuario>();
-		usuarios = em.createQuery(QUERY_BUSQUEDA_USUARIO, Usuario.class).getResultList();
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método obtenerUsuario(): " + e.getMessage());
+        }
 
-		if (usuarios.isEmpty()) {
-			LOGGER.info("No hay datos en la tabla usuarios");
-		} else {
-			for (Usuario usuario : usuarios) {
-				LOGGER.info(usuario.getId() + "--");
-			}
-		}
+        return usuarios;
+    }
 
-		close();
+    public static Usuario obtenerUsuarioEmail(String email) {
+        Usuario usuario = null;
 
-		return usuarios;
+        try {
+            setUp();
 
-	}
+            usuario = em.createQuery(QUERY_BUSQUEDA_EMAIL_USUARIO, Usuario.class)
+                    .setParameter("email", email).getSingleResult();
 
-	public static Usuario obtenerUsuarioEmail(String email) {
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método obtenerUsuarioEmail(): " + e.getMessage());
+        }
 
-		setUp();
+        return usuario;
+    }
 
-		Usuario usuario = em.createQuery(QUERY_BUSQUEDA_EMAIL_USUARIO, Usuario.class).setParameter("email", email).getSingleResult();
+    public static Usuario recuperarUsuario(long id) {
+        Usuario usuario = null;
 
-		close();
+        try {
+            setUp();
 
-		return usuario;
-	}
+            usuario = em.find(Usuario.class, id);
 
-	
-	public static Usuario recuperarUsuario(long id) {
-		
-		setUp();
-		
-		Usuario usuario = em.find(Usuario.class, id);
-		
-		close();
-		
-		return usuario;
-	}
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método recuperarUsuario(): " + e.getMessage());
+        }
+
+        return usuario;
+    }
 }

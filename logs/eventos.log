@@ -4196,3 +4196,80 @@ Caused by: java.sql.SQLException: Failed to add the foreign key constraint. Miss
 23-05-2023 17:08:24 INFO  EquipoDao:88 - 23--Quentin--Tarantino--1963--EEUU--Director
 23-05-2023 17:08:24 INFO  EquipoDao:88 - 24--Silvia--Carrasco--2003--España--Director
 23-05-2023 17:08:24 INFO  EquipoDao:88 - 25--Alex--Palacios--1995--España--Director
+23-05-2023 20:51:34 INFO  EquipoDao:68 - 14--Morgan--Freeman--1937--EEUU--Actor
+23-05-2023 20:51:34 INFO  EquipoDao:68 - 15--Tim--Robbis--1967--EEUU--Actor
+23-05-2023 20:51:34 INFO  EquipoDao:68 - 18--Al Pacino--James--1940--EEUU--Actor
+23-05-2023 20:51:34 INFO  EquipoDao:68 - 19--Michelle--Marie--1970--EEUU--Actor
+23-05-2023 20:51:34 INFO  EquipoDao:68 - 20--Steven--Bauer--1959--Cuba--Actor
+23-05-2023 20:51:34 INFO  EquipoDao:68 - 21--Pablo--De La Cruz--2004--España--Actor
+23-05-2023 20:51:35 INFO  EquipoDao:88 - 16--Frank--Darabont--1954--Francia--Director
+23-05-2023 20:51:35 INFO  EquipoDao:88 - 22--Brian--De Palma--1940--EEUU--Director
+23-05-2023 20:51:35 INFO  EquipoDao:88 - 23--Quentin--Tarantino--1963--EEUU--Director
+23-05-2023 20:51:35 INFO  EquipoDao:88 - 24--Silvia--Carrasco--2003--España--Director
+23-05-2023 20:51:35 INFO  EquipoDao:88 - 25--Alex--Palacios--1995--España--Director
+23-05-2023 20:51:35 INFO  EquipoDao:68 - 14--Morgan--Freeman--1937--EEUU--Actor
+23-05-2023 20:51:35 INFO  EquipoDao:68 - 15--Tim--Robbis--1967--EEUU--Actor
+23-05-2023 20:51:35 INFO  EquipoDao:68 - 18--Al Pacino--James--1940--EEUU--Actor
+23-05-2023 20:51:35 INFO  EquipoDao:68 - 19--Michelle--Marie--1970--EEUU--Actor
+23-05-2023 20:51:35 INFO  EquipoDao:68 - 20--Steven--Bauer--1959--Cuba--Actor
+23-05-2023 20:51:35 INFO  EquipoDao:68 - 21--Pablo--De La Cruz--2004--España--Actor
+23-05-2023 20:51:36 INFO  EquipoDao:88 - 16--Frank--Darabont--1954--Francia--Director
+23-05-2023 20:51:36 INFO  EquipoDao:88 - 22--Brian--De Palma--1940--EEUU--Director
+23-05-2023 20:51:36 INFO  EquipoDao:88 - 23--Quentin--Tarantino--1963--EEUU--Director
+23-05-2023 20:51:36 INFO  EquipoDao:88 - 24--Silvia--Carrasco--2003--España--Director
+23-05-2023 20:51:36 INFO  EquipoDao:88 - 25--Alex--Palacios--1995--España--Director
+23-05-2023 20:51:36 INFO  EquipoDao:68 - 14--Morgan--Freeman--1937--EEUU--Actor
+23-05-2023 20:51:36 INFO  EquipoDao:68 - 15--Tim--Robbis--1967--EEUU--Actor
+23-05-2023 20:51:36 INFO  EquipoDao:68 - 18--Al Pacino--James--1940--EEUU--Actor
+23-05-2023 20:51:36 INFO  EquipoDao:68 - 19--Michelle--Marie--1970--EEUU--Actor
+23-05-2023 20:51:36 INFO  EquipoDao:68 - 20--Steven--Bauer--1959--Cuba--Actor
+23-05-2023 20:51:36 INFO  EquipoDao:68 - 21--Pablo--De La Cruz--2004--España--Actor
+23-05-2023 20:51:37 INFO  EquipoDao:88 - 16--Frank--Darabont--1954--Francia--Director
+23-05-2023 20:51:37 INFO  EquipoDao:88 - 22--Brian--De Palma--1940--EEUU--Director
+23-05-2023 20:51:37 INFO  EquipoDao:88 - 23--Quentin--Tarantino--1963--EEUU--Director
+23-05-2023 20:51:37 INFO  EquipoDao:88 - 24--Silvia--Carrasco--2003--España--Director
+23-05-2023 20:51:37 INFO  EquipoDao:88 - 25--Alex--Palacios--1995--España--Director
+23-05-2023 20:51:38 INFO  EquipoDao:68 - 14--Morgan--Freeman--1937--EEUU--Actor
+23-05-2023 20:51:38 INFO  EquipoDao:68 - 15--Tim--Robbis--1967--EEUU--Actor
+23-05-2023 20:51:38 INFO  EquipoDao:68 - 18--Al Pacino--James--1940--EEUU--Actor
+23-05-2023 20:51:38 INFO  EquipoDao:68 - 19--Michelle--Marie--1970--EEUU--Actor
+23-05-2023 20:51:38 INFO  EquipoDao:68 - 20--Steven--Bauer--1959--Cuba--Actor
+23-05-2023 20:51:38 INFO  EquipoDao:68 - 21--Pablo--De La Cruz--2004--España--Actor
+23-05-2023 20:51:38 INFO  EquipoDao:88 - 16--Frank--Darabont--1954--Francia--Director
+23-05-2023 20:51:38 INFO  EquipoDao:88 - 22--Brian--De Palma--1940--EEUU--Director
+23-05-2023 20:51:38 INFO  EquipoDao:88 - 23--Quentin--Tarantino--1963--EEUU--Director
+23-05-2023 20:51:38 INFO  EquipoDao:88 - 24--Silvia--Carrasco--2003--España--Director
+23-05-2023 20:51:38 INFO  EquipoDao:88 - 25--Alex--Palacios--1995--España--Director
+23-05-2023 20:51:39 INFO  EquipoDao:68 - 14--Morgan--Freeman--1937--EEUU--Actor
+23-05-2023 20:51:39 INFO  EquipoDao:68 - 15--Tim--Robbis--1967--EEUU--Actor
+23-05-2023 20:51:39 INFO  EquipoDao:68 - 18--Al Pacino--James--1940--EEUU--Actor
+23-05-2023 20:51:39 INFO  EquipoDao:68 - 19--Michelle--Marie--1970--EEUU--Actor
+23-05-2023 20:51:39 INFO  EquipoDao:68 - 20--Steven--Bauer--1959--Cuba--Actor
+23-05-2023 20:51:39 INFO  EquipoDao:68 - 21--Pablo--De La Cruz--2004--España--Actor
+23-05-2023 20:51:39 INFO  EquipoDao:88 - 16--Frank--Darabont--1954--Francia--Director
+23-05-2023 20:51:39 INFO  EquipoDao:88 - 22--Brian--De Palma--1940--EEUU--Director
+23-05-2023 20:51:39 INFO  EquipoDao:88 - 23--Quentin--Tarantino--1963--EEUU--Director
+23-05-2023 20:51:39 INFO  EquipoDao:88 - 24--Silvia--Carrasco--2003--España--Director
+23-05-2023 20:51:39 INFO  EquipoDao:88 - 25--Alex--Palacios--1995--España--Director
+23-05-2023 20:51:40 INFO  EquipoDao:68 - 14--Morgan--Freeman--1937--EEUU--Actor
+23-05-2023 20:51:40 INFO  EquipoDao:68 - 15--Tim--Robbis--1967--EEUU--Actor
+23-05-2023 20:51:40 INFO  EquipoDao:68 - 18--Al Pacino--James--1940--EEUU--Actor
+23-05-2023 20:51:40 INFO  EquipoDao:68 - 19--Michelle--Marie--1970--EEUU--Actor
+23-05-2023 20:51:40 INFO  EquipoDao:68 - 20--Steven--Bauer--1959--Cuba--Actor
+23-05-2023 20:51:40 INFO  EquipoDao:68 - 21--Pablo--De La Cruz--2004--España--Actor
+23-05-2023 20:51:41 INFO  EquipoDao:88 - 16--Frank--Darabont--1954--Francia--Director
+23-05-2023 20:51:41 INFO  EquipoDao:88 - 22--Brian--De Palma--1940--EEUU--Director
+23-05-2023 20:51:41 INFO  EquipoDao:88 - 23--Quentin--Tarantino--1963--EEUU--Director
+23-05-2023 20:51:41 INFO  EquipoDao:88 - 24--Silvia--Carrasco--2003--España--Director
+23-05-2023 20:51:41 INFO  EquipoDao:88 - 25--Alex--Palacios--1995--España--Director
+23-05-2023 20:51:41 INFO  EquipoDao:68 - 14--Morgan--Freeman--1937--EEUU--Actor
+23-05-2023 20:51:41 INFO  EquipoDao:68 - 15--Tim--Robbis--1967--EEUU--Actor
+23-05-2023 20:51:41 INFO  EquipoDao:68 - 18--Al Pacino--James--1940--EEUU--Actor
+23-05-2023 20:51:41 INFO  EquipoDao:68 - 19--Michelle--Marie--1970--EEUU--Actor
+23-05-2023 20:51:41 INFO  EquipoDao:68 - 20--Steven--Bauer--1959--Cuba--Actor
+23-05-2023 20:51:41 INFO  EquipoDao:68 - 21--Pablo--De La Cruz--2004--España--Actor
+23-05-2023 20:51:42 INFO  EquipoDao:88 - 16--Frank--Darabont--1954--Francia--Director
+23-05-2023 20:51:42 INFO  EquipoDao:88 - 22--Brian--De Palma--1940--EEUU--Director
+23-05-2023 20:51:42 INFO  EquipoDao:88 - 23--Quentin--Tarantino--1963--EEUU--Director
+23-05-2023 20:51:42 INFO  EquipoDao:88 - 24--Silvia--Carrasco--2003--España--Director
+23-05-2023 20:51:42 INFO  EquipoDao:88 - 25--Alex--Palacios--1995--España--Director

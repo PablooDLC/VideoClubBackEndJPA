@@ -6,77 +6,114 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+/**
+ * Clase que establece los campos y metodos de Alquiler
+ */
 @Entity
 public class Alquiler {
 
-	
-	/*@AttributeOverrides({
-		@AttributeOverride(name="fechaAlquiler", column=@Column(name="fechaAlquiler")),
-		@AttributeOverride(name="idCliente", column=@Column(name="idCliente")),
-		@AttributeOverride(name="idPelicula", column=@Column(name="idPelicula")),
-	})*/
-	private AlquilerId idCompuesta;
-	private long idAlquiler;
-	private LocalDate fechaRetorno;
+    private AlquilerId idCompuesta;
+    private long idAlquiler;
+    private LocalDate fechaRetorno;
 
-	public Alquiler() {
-		super();
-	}
+    /**
+     * Contructor por defecto
+     */
+    public Alquiler() {
+        super();
+    }
 
-	public Alquiler(Pelicula pelicula, Usuario usuario, LocalDate fechaAlquiler, LocalDate fechaRetorno) {
-		super();
-		this.idCompuesta = new AlquilerId(pelicula, usuario, fechaAlquiler);
-		this.fechaRetorno = fechaRetorno;
-	}
-	
-	@EmbeddedId
-	public AlquilerId getIdCompuesta() {
-		return idCompuesta;
-	}
+    /**
+     * Constructor sobrecargado
+     *
+     * @param pelicula
+     * @param usuario
+     * @param fechaAlquiler
+     * @param fechaRetorno
+     */
+    public Alquiler(Pelicula pelicula, Usuario usuario, LocalDate fechaAlquiler, LocalDate fechaRetorno) {
+        super();
+        this.idCompuesta = new AlquilerId(pelicula, usuario, fechaAlquiler);
+        this.fechaRetorno = fechaRetorno;
+    }
 
-	public void setIdCompuesta(AlquilerId idCompuesta) {
-		this.idCompuesta = idCompuesta;
-	}
+    /**
+     * Obtiene el campo
+     *
+     * @return
+     */
+    @EmbeddedId
+    public AlquilerId getIdCompuesta() {
+        return idCompuesta;
+    }
 
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	public long getIdAlquiler() {
-		return idAlquiler;
-	}
+    /**
+     * Establece el campo
+     *
+     * @param idCompuesta
+     */
+    public void setIdCompuesta(AlquilerId idCompuesta) {
+        this.idCompuesta = idCompuesta;
+    }
 
-	public void setIdAlquiler(long idAlquiler) {
-		this.idAlquiler = idAlquiler;
-	}
+    /**
+     * Obtiene el campo
+     *
+     * @return
+     */
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public long getIdAlquiler() {
+        return idAlquiler;
+    }
 
-	public LocalDate getFechaRetorno() {
-		return fechaRetorno;
-	}
+    /**
+     * Establece el campo
+     *
+     * @param idAlquiler
+     */
+    public void setIdAlquiler(long idAlquiler) {
+        this.idAlquiler = idAlquiler;
+    }
 
-	public void setFechaRetorno(LocalDate fechaRetorno) {
-		this.fechaRetorno = fechaRetorno;
-	}
+    /**
+     * Obtiene el campo
+     *
+     * @return
+     */
+    public LocalDate getFechaRetorno() {
+        return fechaRetorno;
+    }
 
-	@Override
-	public String toString() {
-		return "Alquiler [idAlquiler=" + idAlquiler + ", fechaRetorno=" + fechaRetorno + "]";
-	}
+    /**
+     * Establece el campo
+     *
+     * @param fechaRetorno
+     */
+    public void setFechaRetorno(LocalDate fechaRetorno) {
+        this.fechaRetorno = fechaRetorno;
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(idAlquiler, fechaRetorno);
-	}
+    @Override
+    public String toString() {
+        return "Alquiler [idAlquiler=" + idAlquiler + ", fechaRetorno=" + fechaRetorno + "]";
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Alquiler other = (Alquiler) obj;
-		return Objects.equals(idAlquiler, other.idAlquiler) && Objects.equals(fechaRetorno, other.fechaRetorno);
-	}
-	
-	
-	
+    @Override
+    public int hashCode() {
+        return Objects.hash(idAlquiler, fechaRetorno);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Alquiler other = (Alquiler) obj;
+        return Objects.equals(idAlquiler, other.idAlquiler) && Objects.equals(fechaRetorno, other.fechaRetorno);
+    }
+
+
 }

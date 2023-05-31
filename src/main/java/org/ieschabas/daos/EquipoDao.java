@@ -1,5 +1,6 @@
 package org.ieschabas.daos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -12,118 +13,150 @@ import org.ieschabas.clases.Equipo;
 
 public class EquipoDao {
 
-	private static final Logger LOGGER = Logger.getLogger(EquipoDao.class);
-	private static EntityManager em;
-	private static EntityManagerFactory emf;
-	private static final String SQL_BUSQUEDA_EQUIPO = "SELECT e FROM Equipo e";
-	private static final String SQL_BUSQUEDA_ACTOR = "SELECT e FROM Equipo e where rol =  : Actor";
-	private static final String SQL_BUSQUEDA_DIRECTOR = "SELECT e FROM Equipo e where  rol = : Director";
+    private static final Logger LOGGER = Logger.getLogger(EquipoDao.class);
+    private static EntityManager em;
+    private static EntityManagerFactory emf;
+    private static final String SQL_BUSQUEDA_EQUIPO = "SELECT e FROM Equipo e";
+    private static final String SQL_BUSQUEDA_ACTOR = "SELECT e FROM Equipo e WHERE rol = :Actor";
+    private static final String SQL_BUSQUEDA_DIRECTOR = "SELECT e FROM Equipo e WHERE rol = :Director";
 
-	private static void setUp() {
-		emf = Persistence.createEntityManagerFactory("videoClub");
-		em = emf.createEntityManager();
-		em.getTransaction().begin();
+    private static void setUp() {
 
-		// Indicamos al logger el fichero propiedades
+        // Indicamos al logger el fichero propiedades
+        PropertyConfigurator.configure("src/main/resources/log4.properties");
 
-		PropertyConfigurator.configure("src/main/resources/log4.properties");
-	}
+        try {
+            emf = Persistence.createEntityManagerFactory("videoClub");
+            em = emf.createEntityManager();
+            em.getTransaction().begin();
 
-	private static void close() {
-		em.getTransaction().commit();
-		em.close();
-	}
+        } catch (Exception e) {
+            LOGGER.error("Error en el método setUp(): " + e.getMessage());
+        }
+    }
 
-	public static void guardarEquipo(Equipo equipo) {
+    private static void close() {
+        try {
+            em.getTransaction().commit();
+            em.close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método close(): " + e.getMessage());
+        }
+    }
 
-		setUp();
-		
-		if(equipo.getId() != 0) {
-			equipo = em.merge(equipo);
-		}
-		em.persist(equipo);
+    public static void guardarEquipo(Equipo equipo) {
+        try {
+            setUp();
 
-		close();
+            if (equipo.getId() != 0) {
+                equipo = em.merge(equipo);
+            }
+            em.persist(equipo);
 
-	}
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método guardarEquipo(): " + e.getMessage());
+        }
+    }
 
-	public static void eliminarEquipo(Equipo equipo) {
-		setUp();
+    public static void eliminarEquipo(Equipo equipo) {
+        try {
+            setUp();
 
-		equipo = em.merge(equipo);
-		em.remove(equipo);
+            equipo = em.merge(equipo);
+            em.remove(equipo);
 
-		close();
-	}
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método eliminarEquipo(): " + e.getMessage());
+        }
+    }
 
-	public static List<Equipo> obtenerActor(String rol) {
-		setUp();
+    public static List<Equipo> obtenerActor(String rol) {
+        List<Equipo> actores = new ArrayList<>();
 
-		List<Equipo> actores = em.createQuery(SQL_BUSQUEDA_ACTOR, Equipo.class).setParameter("Actor", rol).getResultList();
+        try {
+            setUp();
 
-		if (actores.isEmpty()) {
-			LOGGER.info("No hay datos en la tabla equipo");
-		} else {
-			for (Equipo equipo : actores) {
-				LOGGER.info(equipo.getId() + "--" + equipo.getNombre() + "--" + equipo.getApellidos() + "--"
-						+ equipo.getAnyoNac() + "--" + equipo.getPais() + "--" + equipo.getRol());
-			}
-		}
+            actores = em.createQuery(SQL_BUSQUEDA_ACTOR, Equipo.class).setParameter("Actor", rol).getResultList();
 
-		close();
+            if (actores.isEmpty()) {
+                LOGGER.info("No hay datos en la tabla equipo");
+            } else {
+                for (Equipo equipo : actores) {
+                    LOGGER.info(equipo.getId() + "--" + equipo.getNombre() + "--" + equipo.getApellidos() + "--"
+                            + equipo.getAnyoNac() + "--" + equipo.getPais() + "--" + equipo.getRol());
+                }
+            }
 
-		return actores;
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método obtenerActor(): " + e.getMessage());
+        }
 
-	}
-	
-	public static List<Equipo> obtenerDirector(String rol) {
-		setUp();
+        return actores;
+    }
 
-		List<Equipo> directores = em.createQuery(SQL_BUSQUEDA_DIRECTOR, Equipo.class).setParameter("Director", rol).getResultList();
+    public static List<Equipo> obtenerDirector(String rol) {
+        List<Equipo> directores = new ArrayList<>();
 
-		if (directores.isEmpty()) {
-			LOGGER.info("No hay datos en la tabla equipo");
-		} else {
-			for (Equipo equipo : directores) {
-				LOGGER.info(equipo.getId() + "--" + equipo.getNombre() + "--" + equipo.getApellidos() + "--"
-						+ equipo.getAnyoNac() + "--" + equipo.getPais() + "--" + equipo.getRol());
-			}
-		}
+        try {
+            setUp();
 
-		close();
+            directores = em.createQuery(SQL_BUSQUEDA_DIRECTOR, Equipo.class).setParameter("Director", rol).getResultList();
 
-		return directores;
+            if (directores.isEmpty()) {
+                LOGGER.info("No hay datos en la tabla equipo");
+            } else {
+                for (Equipo equipo : directores) {
+                    LOGGER.info(equipo.getId() + "--" + equipo.getNombre() + "--" + equipo.getApellidos() + "--"
+                            + equipo.getAnyoNac() + "--" + equipo.getPais() + "--" + equipo.getRol());
+                }
+            }
 
-	}
-	
-	public static List<Equipo> obtenerEquipo() {
-		setUp();
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método obtenerDirector(): " + e.getMessage());
+        }
 
-		List<Equipo> equipos = em.createQuery(SQL_BUSQUEDA_EQUIPO, Equipo.class).getResultList();
+        return directores;
+    }
 
-		if (equipos.isEmpty()) {
-			LOGGER.info("No hay datos en la tabla equipo");
-		} else {
-			for (Equipo equipo : equipos) {
-				LOGGER.info(equipo.getId() + "--" + equipo.getNombre() + "--" + equipo.getApellidos() + "--"
-						+ equipo.getAnyoNac() + "--" + equipo.getPais() + "--" + equipo.getRol());
-			}
-		}
+    public static List<Equipo> obtenerEquipo() {
+        List<Equipo> equipos = new ArrayList<>();
 
-		close();
+        try {
+            setUp();
 
-		return equipos;
+            equipos = em.createQuery(SQL_BUSQUEDA_EQUIPO, Equipo.class).getResultList();
 
-	}
-	
-	public static void modificarEquipo(Equipo equipo) {
-		
-		setUp();
+            if (equipos.isEmpty()) {
+                LOGGER.info("No hay datos en la tabla equipo");
+            } else {
+                for (Equipo equipo : equipos) {
+                    LOGGER.info(equipo.getId() + "--" + equipo.getNombre() + "--" + equipo.getApellidos() + "--"
+                            + equipo.getAnyoNac() + "--" + equipo.getPais() + "--" + equipo.getRol());
+                }
+            }
 
-		equipo = em.merge(equipo);
-		em.persist(equipo);
-		
-		close();
-		
-	}
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método obtenerEquipo(): " + e.getMessage());
+        }
+
+        return equipos;
+    }
+
+    public static void modificarEquipo(Equipo equipo) {
+        try {
+            setUp();
+
+            equipo = em.merge(equipo);
+            em.persist(equipo);
+
+            close();
+        } catch (Exception e) {
+            LOGGER.error("Error en el método modificarEquipo(): " + e.getMessage());
+        }
+    }
 }
